@@ -15,6 +15,7 @@ function Footer() {
             value={card.value} 
             max={card.max}
             color={card.color}
+            className="infoBox"
             />
             )
         )}

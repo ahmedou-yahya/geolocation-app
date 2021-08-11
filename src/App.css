@@ -1,4 +1,9 @@
-.App{
+.map{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.footer{
+  position: absolute; 
+  bottom:  0;
 }

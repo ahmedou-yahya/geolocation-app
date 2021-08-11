@@ -1,4 +1,8 @@
 .footer{
     display: flex;
-    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.footer .infoBox{
+    margin-right: 5px;
 }
