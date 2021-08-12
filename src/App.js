@@ -23,12 +23,13 @@ function App() {
   })
 
   const changeStyle = () => {
-    setStyleNumber(~~(Math.random() * 3))
+    setStyleNumber(~~(Math.random() * 4))
     console.log(styleNumber)
   };
 
 
   const mapStyle = [
+    "mapbox://styles/ahmedou-yahya/cks93a45322vj17pf1qur0bd3",
     "mapbox://styles/ahmedou-yahya/cks7gpm6065um18qqm9n8c1za",
     "mapbox://styles/ahmedou-yahya/ckror3xkjdf3e19nzx6ndrgix",
     "mapbox://styles/ahmedou-yahya/cks7gtjfq7kpi17q6jf9duncd"
