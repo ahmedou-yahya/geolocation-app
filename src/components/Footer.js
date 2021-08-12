@@ -33,13 +33,13 @@ function Footer() {
             }
         
         {hidden===false?
-            <VisibilityIcon className="fa fa-plus-circle" color="primary"  style={{ fontSize: 40 }} 
+            <VisibilityOffIcon className="fa fa-plus-circle" color="primary"  style={{ fontSize: 40 }} 
             onClick={handleClick}
             className="visibility"
             style={{ fontSize: 40, color: green[500] }}
             /> 
             :
-            <VisibilityOffIcon className="fa fa-plus-circle" color="primary"  style={{ fontSize: 40 }} 
+            <VisibilityIcon className="fa fa-plus-circle" color="primary"  style={{ fontSize: 40 }} 
             onClick={handleClick}
             className="visibility"
             style={{ fontSize: 40, color: green[500] }}
