@@ -1,4 +1,16 @@
 .boxes{
     display: flex;
     justify-content: space-between;
+    
+
+}
+
+.boxes:last-child {
+    margin-left: auto;
+}
+
+
+.all{
+    display: flex;
+    justify-content: flex-end; 
 }

@@ -1,11 +1,26 @@
-import React from 'react'
+import { React, useState } from 'react'
 import Box from './Box'
 import './Boxes.css'
-function Boxes() {
+import Buttons from './Buttons'
+
+function Boxes({ changeStyle }) {
+
+    const [hidden, setHidden] = useState(false)
+    
+    const handleClick = () =>{
+        setHidden(!hidden)
+    }
     return (
-        <div className="boxes">
-            <Box />
-            <Box />
+        <div className="all">
+            {hidden === false ?
+            <div className="boxes">
+                <Box />
+            </div>
+            :
+            <p></p>
+        }
+            
+            <Buttons hidden={hidden} handleClick={handleClick} changeStyle={changeStyle}  className="buttons"/>
         </div>
     )
 }

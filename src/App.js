@@ -12,6 +12,8 @@ function App() {
 
   const REACT_APP_MAPBOX_TOKEN="pk.eyJ1IjoiYWhtZWRvdS15YWh5YSIsImEiOiJja3JueHU3aHoxYWtrMm5sN2tjeXI1OTI4In0.9tCPRBIsC_cwCLx9Xq6q3g"
 
+  const [styleNumber, setStyleNumber] = useState(0);
+
   const [viewport, setViewport] = useState({
     latitude: 18.079021, 
     longitude: -15.965662,
@@ -19,6 +21,12 @@ function App() {
     height: '100vh',
     zoom:7
   })
+
+  const changeStyle = () => {
+    setStyleNumber(~~(Math.random() * 3))
+    console.log(styleNumber)
+  };
+
 
   const mapStyle = [
     "mapbox://styles/ahmedou-yahya/cks7gpm6065um18qqm9n8c1za",
@@ -45,14 +53,14 @@ function App() {
             setViewport(viewport)
           }}
 
-          mapStyle={mapStyle[0]}
+          mapStyle={mapStyle[styleNumber]}
           pitch = {60} 
           bearing = {-60}
           className="map"
         >
           {newData} 
           <Header />
-          <Boxes />
+          <Boxes changeStyle={changeStyle}/>
           <Footer className="footer" />
         </ReactMapGL>
     </div>
